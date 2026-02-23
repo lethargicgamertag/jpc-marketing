@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { CheckCircle, Home, Shield, Wrench, Mail, MapPin, Phone, ArrowRight, Menu, X, Users } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 export default function LandingPage() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
