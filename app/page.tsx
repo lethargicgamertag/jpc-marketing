@@ -48,10 +48,10 @@ export default function LandingPage() {
           </div>
 
           <div className="hidden md:flex items-center gap-4">
-            <a href="/login" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">
+            <a href="https://jpc-official.vercel.app" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">
               Portal Login
             </a>
-            <a href="/signup" className="bg-[#7653ff] hover:bg-[#6039e6] text-white px-5 py-2.5 rounded-full text-sm font-medium transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 flex items-center gap-2">
+            <a href="https://jpc-official.vercel.app" className="bg-[#7653ff] hover:bg-[#6039e6] text-white px-5 py-2.5 rounded-full text-sm font-medium transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 flex items-center gap-2">
               Sign Up Free <ArrowRight className="h-4 w-4" />
             </a>
           </div>
@@ -73,8 +73,8 @@ export default function LandingPage() {
             <a href="#about" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium text-slate-700 hover:text-[#7653ff]">About</a>
             <a href="#pricing" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium text-slate-700 hover:text-[#7653ff]">Pricing</a>
             <div className="h-px bg-slate-100 my-2 w-full"></div>
-            <a href="/login" className="text-lg font-medium text-slate-700 hover:text-[#7653ff]">Portal Login</a>
-            <a href="/signup" className="bg-[#7653ff] text-white px-4 py-4 rounded-xl text-center font-bold shadow-md hover:bg-[#6039e6]">
+            <a href="https://jpc-official.vercel.app" className="text-lg font-medium text-slate-700 hover:text-[#7653ff]">Portal Login</a>
+            <a href="https://jpc-official.vercel.app" className="bg-[#7653ff] text-white px-4 py-4 rounded-xl text-center font-bold shadow-md hover:bg-[#6039e6]">
               Create Free Account
             </a>
           </motion.div>
@@ -115,7 +115,7 @@ export default function LandingPage() {
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }}
             className="flex flex-col sm:flex-row justify-center gap-4 mb-20"
           >
-            <a href="/signup" className="bg-[#7653ff] hover:bg-[#6039e6] text-white px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-lg hover:shadow-[#7653ff]/25 hover:-translate-y-1 flex items-center justify-center gap-2">
+            <a href="https://jpc-official.vercel.app" className="bg-[#7653ff] hover:bg-[#6039e6] text-white px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-lg hover:shadow-[#7653ff]/25 hover:-translate-y-1 flex items-center justify-center gap-2">
               Create Free Account <ArrowRight className="h-5 w-5" />
             </a>
             <a href="#pricing" className="bg-white border border-slate-200 hover:border-slate-300 hover:bg-slate-50 text-slate-700 px-8 py-4 rounded-xl text-lg font-bold transition-all flex items-center justify-center">
@@ -187,23 +187,27 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* --- ABOUT SECTION --- */}
+            {/* --- ABOUT SECTION --- */}
       <section id="about" className="py-24 bg-slate-900 text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 -mr-40 -mt-40 w-96 h-96 bg-[#7653ff] rounded-full blur-[150px] opacity-40"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid md:grid-cols-2 gap-16 items-center">
-                        <motion.div 
+            
+            {/* Left Column: Your Photo */}
+            <motion.div 
               initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
               className="relative aspect-square md:h-[500px] rounded-3xl overflow-hidden bg-slate-800 border border-slate-700 shadow-2xl group"
             >
-              {/* 🚨 REPLACED WITH YOUR ACTUAL PHOTO */}
               <img 
-                src="/founder.png"
+                src="/founder.png" 
                 alt="Founder of Jamaica Property Care" 
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
             </motion.div>
+            
+            {/* Right Column: Your Story */}
+            <motion.div 
               initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-8">Built for the Jamaican Real Estate Market.</h2>
@@ -216,9 +220,11 @@ export default function LandingPage() {
                 <p className="font-bold text-2xl text-white font-serif italic tracking-wide">The JPC Team</p>
               </div>
             </motion.div>
+
           </div>
         </div>
       </section>
+      
 
       {/* --- PRICING SECTION --- */}
       <section id="pricing" className="py-24 bg-slate-50 relative">
@@ -244,7 +250,7 @@ export default function LandingPage() {
                 <span className="text-5xl font-extrabold text-slate-900">0</span>
                 <span className="text-slate-500 font-medium"> JMD / mo</span>
               </div>
-              <a href="/signup" className="block w-full bg-[#f3f0ff] hover:bg-[#e9e4ff] text-[#7653ff] font-bold py-4 rounded-xl text-center transition-colors mb-8">Sign Up Free</a>
+              <a href="https://jpc-official.vercel.app" className="block w-full bg-[#f3f0ff] hover:bg-[#e9e4ff] text-[#7653ff] font-bold py-4 rounded-xl text-center transition-colors mb-8">Sign Up Free</a>
               <ul className="space-y-4 text-sm text-slate-600 font-medium">
                 <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#7653ff] shrink-0" /> Up to 2 properties & 6 renters</li>
                 <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#7653ff] shrink-0" /> Automated rent tracking</li>
@@ -262,7 +268,7 @@ export default function LandingPage() {
                 <span className="text-5xl font-extrabold">5,000</span>
                 <span className="text-blue-200 font-medium"> JMD / mo</span>
               </div>
-              <a href="/signup" className="block w-full bg-white hover:bg-slate-50 text-[#7653ff] font-bold py-4 rounded-xl text-center transition-colors shadow-lg mb-8">Start Building Free</a>
+              <a href="https://jpc-official.vercel.app" className="block w-full bg-white hover:bg-slate-50 text-[#7653ff] font-bold py-4 rounded-xl text-center transition-colors shadow-lg mb-8">Start Building Free</a>
               <ul className="space-y-4 text-sm text-white font-medium">
                 <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-blue-200 shrink-0" /> Up to 10 properties & 25 renters</li>
                 <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-blue-200 shrink-0" /> Tenant document vault (Leases & IDs)</li>
@@ -279,7 +285,7 @@ export default function LandingPage() {
                 <span className="text-5xl font-extrabold text-slate-900">15,000</span>
                 <span className="text-slate-500 font-medium"> JMD / mo</span>
               </div>
-              <a href="/signup" className="block w-full bg-[#f3f0ff] hover:bg-[#e9e4ff] text-[#7653ff] font-bold py-4 rounded-xl text-center transition-colors mb-8">Scale With Us Free</a>
+              <a href="https://jpc-official.vercel.app" className="block w-full bg-[#f3f0ff] hover:bg-[#e9e4ff] text-[#7653ff] font-bold py-4 rounded-xl text-center transition-colors mb-8">Scale With Us Free</a>
               <ul className="space-y-4 text-sm text-slate-600 font-medium">
                 <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#7653ff] shrink-0" /> Unlimited properties & renters</li>
                 <li className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-[#7653ff] shrink-0" /> Agent & Contractor portal access</li>
@@ -317,7 +323,7 @@ export default function LandingPage() {
               <ul className="space-y-4 text-sm">
                 <li><a href="#features" className="hover:text-white hover:translate-x-1 inline-block transition-transform">Features</a></li>
                 <li><a href="#pricing" className="hover:text-white hover:translate-x-1 inline-block transition-transform">Pricing</a></li>
-                <li><a href="/login" className="hover:text-white hover:translate-x-1 inline-block transition-transform">Landlord Login</a></li>
+                <li><a href="https://jpc-official.vercel.app" className="hover:text-white hover:translate-x-1 inline-block transition-transform">Landlord Login</a></li>
               </ul>
             </div>
                         {/* Legal */}
