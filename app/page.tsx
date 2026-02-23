@@ -318,18 +318,21 @@ export default function LandingPage() {
                 <li><a href="/login" className="hover:text-white hover:translate-x-1 inline-block transition-transform">Landlord Login</a></li>
               </ul>
             </div>
+                        {/* Legal */}
             <div>
               <h4 className="text-white font-bold mb-6 tracking-wide">Legal</h4>
               <ul className="space-y-4 text-sm">
-                <li><a href="#" className="hover:text-white hover:translate-x-1 inline-block transition-transform">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-white hover:translate-x-1 inline-block transition-transform">Terms of Service</a></li>
+                {/* 🚨 CHANGED href="#" TO REAL ROUTES */}
+                <li><a href="/privacy" className="hover:text-white hover:translate-x-1 inline-block transition-transform">Privacy Policy</a></li>
+                <li><a href="/terms" className="hover:text-white hover:translate-x-1 inline-block transition-transform">Terms of Service</a></li>
               </ul>
             </div>
+            
             <div>
               <h4 className="text-white font-bold mb-6 tracking-wide">Contact Us</h4>
               <ul className="space-y-4 text-sm">
                 <li className="flex items-start gap-3"><MapPin className="h-5 w-5 text-[#7653ff] shrink-0" /><span>Kingston, Jamaica</span></li>
-                <li className="flex items-center gap-3"><Mail className="h-5 w-5 text-[#7653ff] shrink-0" /><a href="mailto:support@jpc.com" className="hover:text-white transition-colors">support@jpc.com</a></li>
+                <li className="flex items-center gap-3"><Mail className="h-5 w-5 text-[#7653ff] shrink-0" /><a href="mailto:support@jpcofficial.app" className="hover:text-white transition-colors">support@jpc.com</a></li>
               </ul>
             </div>
           </div>
