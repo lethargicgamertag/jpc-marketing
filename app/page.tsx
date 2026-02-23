@@ -29,10 +29,14 @@ export default function LandingPage() {
       <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 shadow-sm relative transition-all">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           
+                    {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="h-8 w-8 bg-gradient-to-br from-[#7653ff] to-[#4facfe] rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-md">
-              J
-            </div>
+            {/* 🚨 REPLACED CSS BOX WITH FAVICON IMAGE */}
+            <img 
+              src="/favicon.ico" 
+              alt="JPC Logo" 
+              className="h-8 w-8 rounded-lg shadow-md object-contain" 
+            />
             <span className="text-xl font-bold tracking-tight text-slate-800 hidden sm:block">Jamaica Property Care</span>
             <span className="text-xl font-bold tracking-tight text-slate-800 sm:hidden">JPC</span>
           </div>
@@ -290,13 +294,22 @@ export default function LandingPage() {
       <footer className="bg-slate-950 text-slate-300 py-16 border-t border-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-12">
+                        {/* Brand */}
             <div className="col-span-1 md:col-span-1">
               <div className="flex items-center gap-3 mb-6">
-                <div className="h-8 w-8 bg-gradient-to-br from-[#7653ff] to-[#4facfe] rounded-lg flex items-center justify-center text-white font-bold text-xl">J</div>
+                {/* 🚨 REPLACED CSS BOX WITH FAVICON IMAGE */}
+                <img 
+                  src="/favicon.ico" 
+                  alt="JPC Logo" 
+                  className="h-8 w-8 rounded-lg shadow-md object-contain" 
+                />
                 <span className="text-xl font-bold tracking-tight text-white">Jamaica Property Care</span>
               </div>
-              <p className="text-sm text-slate-400 leading-relaxed">Modern property management software built exclusively for the Jamaican real estate market.</p>
+              <p className="text-sm text-slate-400 leading-relaxed">
+                Modern property management software built exclusively for the Jamaican real estate market.
+              </p>
             </div>
+            
             <div>
               <h4 className="text-white font-bold mb-6 tracking-wide">Platform</h4>
               <ul className="space-y-4 text-sm">
