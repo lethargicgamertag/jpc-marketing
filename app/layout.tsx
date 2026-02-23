@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Jamaica Property Care (JPC) | Modern Property Management",
@@ -11,3 +12,17 @@ export const metadata: Metadata = {
     locale: "en_JM",
   },
 };
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" className="scroll-smooth">
+      <body className="antialiased">
+        {children}
+      </body>
+    </html>
+  );
+}
