@@ -193,20 +193,22 @@ export default function LandingPage() {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid md:grid-cols-2 gap-16 items-center">
-            <motion.div 
+                        <motion.div 
               initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
               className="relative aspect-square md:h-[500px] rounded-3xl overflow-hidden bg-slate-800 border border-slate-700 shadow-2xl group"
             >
-              <div className="absolute inset-0 flex items-center justify-center text-slate-400 group-hover:scale-105 transition-transform duration-700">
-                <span className="text-sm font-medium tracking-widest uppercase">[Insert Professional Photo Here]</span>
-              </div>
+              {/* 🚨 REPLACED WITH YOUR ACTUAL PHOTO */}
+              <img 
+                src="/founder.png"
+                alt="Founder of Jamaica Property Care" 
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
             </motion.div>
-            <motion.div 
               initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-8">Built for the Jamaican Real Estate Market.</h2>
               <div className="space-y-6 text-lg text-slate-300 leading-relaxed font-light">
-                <p>Hi, I'm the founder of Jamaica Property Care. I built this platform because I saw firsthand how difficult it was for local landlords to keep track of their properties using messy spreadsheets and endless WhatsApp groups.</p>
+                <p>Hi, I'm Linton Green, the founder of Jamaica Property Care. I built this platform because I saw firsthand how difficult it was for local landlords to keep track of their properties using messy spreadsheets and endless WhatsApp groups.</p>
                 <p>Property management software shouldn't be complicated, and it shouldn't ignore the unique realities of renting in Jamaica.</p>
                 <p>JPC was designed from the ground up to give you total control over your investments, protect you legally with proper documentation, and give your tenants, agents, and contractors a seamless, modern experience.</p>
               </div>
