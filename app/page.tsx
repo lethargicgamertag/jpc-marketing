@@ -6,8 +6,8 @@ import { motion, Variants } from 'framer-motion';
 export default function LandingPage() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Animation variants for staggered lists
-  const containerVariants = {
+  // Add : Variants to the container
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
@@ -15,10 +15,12 @@ export default function LandingPage() {
     }
   };
 
-  const itemVariants = {
+  // Add : Variants to the item
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
   };
+  
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900 selection:bg-[#7653ff] selection:text-white overflow-hidden">
