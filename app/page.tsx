@@ -217,7 +217,7 @@ export default function LandingPage() {
                 <p>JPC was designed from the ground up to give you total control over your investments, protect you legally with proper documentation, and give your tenants, agents, and contractors a seamless, modern experience.</p>
               </div>
               <div className="mt-10 pt-8 border-t border-slate-800">
-                <p className="font-bold text-2xl text-white font-serif italic tracking-wide">The JPC Team</p>
+                <p className="font-bold text-2xl text-white font-serif italic tracking-wide">The JPC Founder</p>
               </div>
             </motion.div>
 
