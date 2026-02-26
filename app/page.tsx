@@ -1,12 +1,11 @@
 'use client';
 import React, { useState } from 'react';
-import { CheckCircle, Home, Shield, Wrench, Mail, MapPin, Phone, ArrowRight, Menu, X, Users } from 'lucide-react';
+import { CheckCircle, Home, Shield, Wrench, Mail, MapPin, ArrowRight, Menu, X, Users } from 'lucide-react';
 import { motion, Variants } from 'framer-motion';
 
 export default function LandingPage() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Add : Variants to the container
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     show: {
@@ -15,12 +14,10 @@ export default function LandingPage() {
     }
   };
 
-  // Add : Variants to the item
   const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
   };
-  
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900 selection:bg-[#7653ff] selection:text-white overflow-hidden">
@@ -29,9 +26,8 @@ export default function LandingPage() {
       <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 shadow-sm relative transition-all">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           
-                    {/* Logo */}
+          {/* Logo */}
           <div className="flex items-center gap-3">
-            {/* 🚨 REPLACED CSS BOX WITH FAVICON IMAGE */}
             <img 
               src="/favicon.ico" 
               alt="JPC Logo" 
@@ -96,19 +92,21 @@ export default function LandingPage() {
              <span className="text-xs font-bold text-slate-600 uppercase tracking-wider">JDPA Compliant</span>
           </motion.div>
 
+          {/* 🚨 SEO OPTIMIZED H1 */}
           <motion.h1 
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}
             className="text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-8 leading-[1.1]"
           >
-            Run Your Rental Properties <br className="hidden md:block" />
+            Run Your Rental Portfolio & Agency <br className="hidden md:block" />
             Like a <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7653ff] to-[#4facfe]">Professional Business.</span>
           </motion.h1>
           
+          {/* 🚨 OPTIMIZED SUBTITLE */}
           <motion.p 
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }}
             className="mt-6 text-xl text-slate-600 max-w-2xl mx-auto mb-12 leading-relaxed"
           >
-            Say goodbye to chaotic WhatsApp chats and lost receipts. <strong className="text-slate-800">Jamaica Property Care (JPC)</strong> is the all-in-one ecosystem designed specifically for Jamaican real estate.
+            Say goodbye to chaotic WhatsApp chats and lost receipts. <strong className="text-slate-800">Jamaica Property Care (JPC)</strong> is the all-in-one ecosystem designed specifically for Jamaican landlords, property managers, and real estate agencies.
           </motion.p>
           
           <motion.div 
@@ -123,7 +121,6 @@ export default function LandingPage() {
             </a>
           </motion.div>
 
-          {/* Floating Glassmorphism UI Mockup */}
           <motion.div 
             initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.5 }}
             className="relative mx-auto max-w-3xl"
@@ -161,7 +158,7 @@ export default function LandingPage() {
             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Everything you need to secure your investment.</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Everything you need to secure your investments and scale your agency.</h2>
             <p className="mt-4 text-lg text-slate-600">Built from the ground up to handle the realities of the Jamaican rental market.</p>
           </motion.div>
 
@@ -169,11 +166,12 @@ export default function LandingPage() {
             variants={containerVariants} initial="hidden" whileInView="show" viewport={{ once: true, margin: "-50px" }}
             className="grid md:grid-cols-2 gap-8"
           >
+            {/* 🚨 OPTIMIZED FEATURE DESCRIPTIONS */}
             {[
-              { icon: Home, title: "Automated Rent & Accounting", desc: "Track every dollar seamlessly. JPC handles complex partial payments, automatically rolls due dates forward, and enforces the legal 7.5% annual rent increase guardrails." },
-              { icon: Shield, title: "The Tenant Vault", desc: "Secure, JDPA-compliant digital storage. Keep your move-in condition photos, government ID copies, signed leases, and digital payment receipts perfectly organized." },
-              { icon: Users, title: "A Complete Team Ecosystem", desc: "Don't manage alone. Give secure, restricted portal access to your real estate agents, property assistants, and trusted contractors." },
-              { icon: Wrench, title: "Maintenance on Autopilot", desc: "No more 2 AM phone calls. Tenants submit repair tickets directly. Assign them to a contractor, log the expense, upload the receipt, and automatically track ROI." }
+              { icon: Home, title: "Automated Rent & Accounting", desc: "Track every dollar across your entire portfolio seamlessly. JPC handles complex partial payments, automatically rolls due dates forward, and enforces the legal 7.5% annual rent increase guardrails." },
+              { icon: Shield, title: "The Document Vault", desc: "Secure, JDPA-compliant digital storage for your business. Keep move-in condition photos, government ID copies, signed leases, and digital payment receipts perfectly organized." },
+              { icon: Users, title: "Built for Real Estate Teams", desc: "Don't manage alone. Our Multi-Agent architecture gives secure, restricted portal access to your real estate agents, property assistants, and trusted contractors." },
+              { icon: Wrench, title: "Maintenance on Autopilot", desc: "No more 2 AM phone calls. Tenants submit repair tickets directly. Assign them to a contractor, log the expense, upload the receipt, and automatically track ROI for every property." }
             ].map((feature, i) => (
               <motion.div key={i} variants={itemVariants} className="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-[#7653ff]/30 hover:shadow-lg transition-all group">
                 <div className="h-14 w-14 bg-white rounded-2xl shadow-sm flex items-center justify-center mb-6 text-[#7653ff] group-hover:scale-110 transition-transform">
@@ -187,14 +185,13 @@ export default function LandingPage() {
         </div>
       </section>
 
-            {/* --- ABOUT SECTION --- */}
+      {/* --- ABOUT SECTION --- */}
       <section id="about" className="py-24 bg-slate-900 text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 -mr-40 -mt-40 w-96 h-96 bg-[#7653ff] rounded-full blur-[150px] opacity-40"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             
-            {/* Left Column: Your Photo */}
             <motion.div 
               initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
               className="relative aspect-square md:h-[500px] rounded-3xl overflow-hidden bg-slate-800 border border-slate-700 shadow-2xl group"
@@ -206,15 +203,14 @@ export default function LandingPage() {
               />
             </motion.div>
             
-            {/* Right Column: Your Story */}
             <motion.div 
               initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-8">Built for the Jamaican Real Estate Market.</h2>
               <div className="space-y-6 text-lg text-slate-300 leading-relaxed font-light">
-                <p>Hi, I'm Linton Green, the founder of Jamaica Property Care. I built this platform because I saw firsthand how difficult it was for local landlords to keep track of their properties using messy spreadsheets and endless WhatsApp groups.</p>
+                <p>Hi, I'm Linton Green, the founder of Jamaica Property Care. I built this platform because I saw firsthand how difficult it was for local landlords and real estate agencies to keep track of their properties using messy spreadsheets and endless WhatsApp groups.</p>
                 <p>Property management software shouldn't be complicated, and it shouldn't ignore the unique realities of renting in Jamaica.</p>
-                <p>JPC was designed from the ground up to give you total control over your investments, protect you legally with proper documentation, and give your tenants, agents, and contractors a seamless, modern experience.</p>
+                <p>JPC was designed from the ground up to give you total control over your investments, protect your business legally with proper documentation, and give your tenants, agents, and contractors a seamless, modern experience.</p>
               </div>
               <div className="mt-10 pt-8 border-t border-slate-800">
                 <p className="font-bold text-2xl text-white font-serif italic tracking-wide">The JPC Founder</p>
@@ -225,7 +221,6 @@ export default function LandingPage() {
         </div>
       </section>
       
-
       {/* --- PRICING SECTION --- */}
       <section id="pricing" className="py-24 bg-slate-50 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -237,6 +232,7 @@ export default function LandingPage() {
             <p className="mt-4 text-lg text-slate-600">Scale your portfolio with tools built for every stage of your growth.</p>
           </motion.div>
 
+          {/* 🚨 OPTIMIZED PRICING TARGETS */}
           <motion.div 
             variants={containerVariants} initial="hidden" whileInView="show" viewport={{ once: true, margin: "-50px" }}
             className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-center"
@@ -245,7 +241,7 @@ export default function LandingPage() {
             {/* FREE TIER */}
             <motion.div variants={itemVariants} className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-2xl font-bold text-slate-900 mb-2">Free</h3>
-              <p className="text-slate-500 text-sm mb-6 min-h-[40px]">For small landlords getting organized. Simple, reliable, and secure.</p>
+              <p className="text-slate-500 text-sm mb-6 min-h-[40px]">For independent landlords getting organized. Simple, reliable, and secure.</p>
               <div className="mb-8">
                 <span className="text-5xl font-extrabold text-slate-900">0</span>
                 <span className="text-slate-500 font-medium"> JMD / mo</span>
@@ -263,7 +259,7 @@ export default function LandingPage() {
             <motion.div variants={itemVariants} className="bg-gradient-to-b from-[#7653ff] to-[#5a39cf] rounded-3xl p-8 border border-[#7653ff] shadow-2xl relative transform lg:-translate-y-4">
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white text-[#7653ff] text-xs font-black uppercase tracking-widest py-1.5 px-4 rounded-full shadow-md">Most Popular</div>
               <h3 className="text-2xl font-bold text-white mb-2">Starter</h3>
-              <p className="text-blue-100 text-sm mb-6 min-h-[40px]">For landlords who want total control and JDPA-compliant documentation.</p>
+              <p className="text-blue-100 text-sm mb-6 min-h-[40px]">For growing portfolios and small teams who want total control and compliance.</p>
               <div className="mb-8 text-white">
                 <span className="text-5xl font-extrabold">5,000</span>
                 <span className="text-blue-200 font-medium"> JMD / mo</span>
@@ -280,7 +276,7 @@ export default function LandingPage() {
             {/* PRO TIER */}
             <motion.div variants={itemVariants} className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-2xl font-bold text-slate-900 mb-2">Professional</h3>
-              <p className="text-slate-500 text-sm mb-6 min-h-[40px]">For serious operators running their rentals like a fully branded business.</p>
+              <p className="text-slate-500 text-sm mb-6 min-h-[40px]">For real estate agencies and serious operators running a fully branded business.</p>
               <div className="mb-8">
                 <span className="text-5xl font-extrabold text-slate-900">15,000</span>
                 <span className="text-slate-500 font-medium"> JMD / mo</span>
@@ -298,14 +294,13 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* --- FOOTER (Same as before) --- */}
+      {/* --- FOOTER --- */}
       <footer className="bg-slate-950 text-slate-300 py-16 border-t border-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-12">
-                        {/* Brand */}
+            
             <div className="col-span-1 md:col-span-1">
               <div className="flex items-center gap-3 mb-6">
-                {/* 🚨 REPLACED CSS BOX WITH FAVICON IMAGE */}
                 <img 
                   src="/favicon.ico" 
                   alt="JPC Logo" 
@@ -314,7 +309,7 @@ export default function LandingPage() {
                 <span className="text-xl font-bold tracking-tight text-white">Jamaica Property Care</span>
               </div>
               <p className="text-sm text-slate-400 leading-relaxed">
-                Modern property management software built exclusively for the Jamaican real estate market.
+                Modern property management software built exclusively for the Jamaican real estate market and agencies.
               </p>
             </div>
             
@@ -326,24 +321,60 @@ export default function LandingPage() {
                 <li><a href="https://jpc-official.vercel.app" className="hover:text-white hover:translate-x-1 inline-block transition-transform">Landlord Login</a></li>
               </ul>
             </div>
-                        {/* Legal */}
+            
             <div>
               <h4 className="text-white font-bold mb-6 tracking-wide">Legal</h4>
               <ul className="space-y-4 text-sm">
-                {/* 🚨 CHANGED href="#" TO REAL ROUTES */}
                 <li><a href="/privacy" className="hover:text-white hover:translate-x-1 inline-block transition-transform">Privacy Policy</a></li>
                 <li><a href="/terms" className="hover:text-white hover:translate-x-1 inline-block transition-transform">Terms of Service</a></li>
               </ul>
             </div>
             
+            {/* 🚨 CONTACT US & NEW SOCIAL LINKS */}
             <div>
               <h4 className="text-white font-bold mb-6 tracking-wide">Contact Us</h4>
-              <ul className="space-y-4 text-sm">
-                <li className="flex items-start gap-3"><MapPin className="h-5 w-5 text-[#7653ff] shrink-0" /><span>Kingston, Jamaica</span></li>
-                <li className="flex items-center gap-3"><Mail className="h-5 w-5 text-[#7653ff] shrink-0" /><a href="mailto:support@jpcofficial.app" className="hover:text-white transition-colors">support@jpc.com</a></li>
+              <ul className="space-y-4 text-sm mb-8">
+                <li className="flex items-start gap-3">
+                  <MapPin className="h-5 w-5 text-[#7653ff] shrink-0" />
+                  <span>Kingston, Jamaica</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <Mail className="h-5 w-5 text-[#7653ff] shrink-0" />
+                  <a href="mailto:support@jpcofficial.app" className="hover:text-white transition-colors">support@jpc.com</a>
+                </li>
               </ul>
+
+              {/* SOCIAL ICONS (Using pure SVGs so no extra libraries needed) */}
+              <div className="pt-6 border-t border-slate-800">
+                <p className="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-4">Connect With Us</p>
+                <div className="flex items-center gap-4">
+                  
+                  {/* WhatsApp */}
+                  <a href="#" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-[#25D366] transition-colors" aria-label="WhatsApp">
+                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12.031 0C5.385 0 0 5.388 0 12.035c0 2.124.553 4.195 1.604 6.015L.178 23.323l5.412-1.42A11.966 11.966 0 0012.031 24c6.646 0 12.033-5.388 12.033-12.035S18.677 0 12.031 0zm0 21.986a9.96 9.96 0 01-5.087-1.39l-.364-.216-3.774.99.999-3.682-.236-.377a9.957 9.957 0 01-1.523-5.276c0-5.534 4.502-10.038 10.035-10.038 2.68 0 5.197 1.045 7.091 2.94 1.894 1.895 2.937 4.412 2.937 7.095 0 5.534-4.502 10.035-10.035 10.035zm5.51-7.536c-.302-.15-1.785-.881-2.062-.982-.276-.1-.478-.15-.678.15-.201.3-.778.981-.954 1.182-.176.2-.352.226-.653.076-1.547-.773-2.698-1.576-3.75-3.344-.2-.338.201-.31.788-1.487.101-.201.05-.376-.025-.526-.076-.15-.678-1.631-.929-2.233-.244-.588-.492-.508-.678-.517-.176-.008-.377-.008-.577-.008-.2 0-.528.075-.804.376-.276.301-1.055 1.03-1.055 2.51 0 1.48 1.08 2.91 1.23 3.111.151.201 2.11 3.221 5.11 4.516.714.309 1.27.493 1.704.631.716.227 1.368.195 1.884.118.577-.086 1.785-.73 2.036-1.436.251-.706.251-1.31.176-1.436-.075-.126-.276-.201-.577-.352z" />
+                    </svg>
+                  </a>
+                  
+                  {/* Instagram */}
+                  <a href="#" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-[#E1306C] transition-colors" aria-label="Instagram">
+                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                    </svg>
+                  </a>
+                  
+                  {/* TikTok */}
+                  <a href="#" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors" aria-label="TikTok">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z" />
+                    </svg>
+                  </a>
+
+                </div>
+              </div>
             </div>
           </div>
+          
           <div className="border-t border-slate-800 mt-16 pt-8 text-sm text-slate-500">
             <p>&copy; {new Date().getFullYear()} Jamaica Property Care (JPC). All rights reserved.</p>
           </div>
